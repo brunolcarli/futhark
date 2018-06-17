@@ -5,6 +5,8 @@ Module futhark for printing unicode runes in prompt.
 by: Bruno L. Carli
 """
 
+from random import choice
+
 class Futhark:
 	"""
 	Futhark class
@@ -133,7 +135,7 @@ class Futhark:
 				del text[i], text[i]
 			elif text[i] == "i" and text[i+1] == "n" and text[i+2] == "g":
 				rune = "ing"
-				sygil = runestone[rune]
+				sygil += runestone[rune]
 				del text[i], text[i], text[i]
 			elif text[i] in runestone.keys():
 				sygil += runestone[text[i]]
